@@ -20,7 +20,6 @@ for row in ds:
     if any(kw in title.lower() for kw in keywords):
         counter += 1
         
-        # Каждые 50 найденных статей выводим статус в Терминал
         if counter % 50 == 0:
             print(f" Найдено кодексов: {counter}/1500...")
             
@@ -35,9 +34,8 @@ for row in ds:
         if counter >= 1500:
             break
 
-# Сохраняем в файл для тренировки
 with open("train_laws.jsonl", "a", encoding="utf-8") as f:
     for row in dataset_rows:
         f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
-print(f"🚀 Все готово! Создан файл 'train_laws.jsonl'. Найдено статей: {counter}")
+print(f"Все готово! Создан файл 'train_laws.jsonl'. Найдено статей: {counter}")
