@@ -1,0 +1,15 @@
+**/.DS_Store
+.vscode/
+
+venv/
+__pycache__/
+*.pyc
+
+fused_model/*
+adapters/*
+*.gguf
+*.jsonl
+*.parquet
+
+!fused_model/.gitkeep
+!adapters/.gitkeep
