@@ -1,4 +1,13 @@
-from ./fused_model
+from ./ashai-v0.1-alpha.gguf
 
-parameter temperature 0.6
+parameter temperature 0.55
 parameter num_ctx 4096
+
+template """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
+parameter stop "<|im_start|>"
+parameter stop "<|im_end|>"

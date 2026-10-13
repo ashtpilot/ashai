@@ -2,6 +2,7 @@
 .vscode/
 
 venv/
+venv_gguf/
 __pycache__/
 *.pyc
 
@@ -13,3 +14,5 @@ adapters/*
 
 !fused_model/.gitkeep
 !adapters/.gitkeep
+
+llama.cpp/
